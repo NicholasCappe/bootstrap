@@ -1,18 +1,4 @@
 var img;
-var img2;
-var tet1;
-var tet2;
-var tet3;
-var tet4;
-var tet5;
-var tet6;
-var tet7;
-var t;
-var e;
-var r;
-var i;
-var s;
-var company;
 var initials ='nc'; // your initials
 var choice = '1'; // starting choice, so it is not empty
 var screenbg = 250; // off white background
@@ -22,22 +8,7 @@ function preload() {
 // preload() runs once, it may make you wait
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
-  img = loadImage('https://i.imgur.com/LIsUyKR.png');
-  img2 = loadImage('https://i.imgur.com/LJX9Z0p.gif');
-  tet1 = loadImage('https://i.imgur.com/58mfxZ4.png');
-  tet2 = loadImage('https://i.imgur.com/WTVzaUX.png');
-  tet3 = loadImage('https://i.imgur.com/DIc2Efk.png');
-  tet4 = loadImage('https://i.imgur.com/CUed5tS.png');
-  tet5 = loadImage('https://i.imgur.com/CKmSnCj.png');
-  tet6 = loadImage('https://i.imgur.com/pIuA3Ul.png');
-  tet7 = loadImage('https://i.imgur.com/w5g96WG.png');
-  t = loadImage('https://i.imgur.com/PUg39LG.png');
-  e = loadImage('https://i.imgur.com/WJ8ZKFi.png');
-  r = loadImage('https://i.imgur.com/keZOVzO.png');
-  i = loadImage('https://i.imgur.com/qXrKtLV.png');
-  s = loadImage('https://i.imgur.com/etVjXc6.png');
-  company = loadImage('https://i.imgur.com/I2ZY209.png');
-  
+  img = loadImage('https://dma-git.github.io/images/74.png');
 }
 
 function setup() {
@@ -61,23 +32,27 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // just make sure each key option has the a stroke or fill and then what type of 
   // graphic function
 
- if (toolChoice == '1' || toolChoice == '1') { // 1 places the tetris piece we pre-loaded
-    image(tet5, mouseX, mouseY);
+ if (toolChoice == '1' ) {  // first tool
+   
+    stroke(01);
+    rect(mouseX, mouseY, pmouseX, pmouseY);
     
-  } else if (toolChoice == '2' || toolChoice == '2') { // 2 places the tetris piece we pre-loaded
-    image(tet4, mouseX, mouseY);
+  } else if (toolChoice == '2') { // second tool
 
-    stroke(30);
+    stroke(20);
     line(mouseX, mouseY, pmouseX, pmouseY);
-    
-  } else if (toolChoice == '3' || toolChoice == '3') { // 3 places the tetris piece we pre-loaded
-    image(tet1, mouseX, mouseY);
-    
-  } else if (toolChoice == '4' || toolChoice == '4') { // 4 places the tetris piece we pre-loaded
-    image(tet2, mouseX, mouseY);
-    
-  } else if (toolChoice == '5' || toolChoice == '5') { // 5 places the tetris piece we pre-loaded
-    image(tet3, mouseX, mouseY);
+  } else if (toolChoice == '3') { // third tool
+
+    stroke(300, 100, 0, 80);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+  } else if (toolChoice == '4') {
+
+    stroke(0, 0, 255);
+    line(mouseX, mouseY, pmouseX, pmouseY);
+  } else if (key == '5') { // this tool calls a function
+    stroke(0, 0, 255);
+    testbox(20, 20, 200);
+    testbox(200, 20, 20);
     
     
     
@@ -104,31 +79,9 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
     stroke(0, 0);
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
-    
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX, mouseY);
-  } else if (toolChoice == 'f' || toolChoice == 'F') { // f places the gif we pre-loaded
-    image(img2, mouseX, mouseY);
-     
-     
-  } else if (toolChoice == 't' || toolChoice == 'T') { // t places the letter
-    image(t, mouseX, mouseY);
-        
-  } else if (toolChoice == 'e' || toolChoice == 'E') { // e places the letter
-    image(e, mouseX, mouseY);
-        
-  } else if (toolChoice == 'r' || toolChoice == 'R') { // r places the letter
-    image(r, mouseX, mouseY);
-        
-  } else if (toolChoice == 'i' || toolChoice == 'I') { // i places the letter
-    image(i, mouseX, mouseY);
-        
-  } else if (toolChoice == 's' || toolChoice == 'S') { // s places the letter
-    image(s, mouseX, mouseY);
-        
-  } else if (toolChoice == 'c' || toolChoice == 'C') { // c places the company symbol thing
-    image(company, mouseX, mouseY);
-        
+    
   }
  }
  
